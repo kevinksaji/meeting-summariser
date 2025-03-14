@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+aiofiles
+openai-whisper
+openai
+requests
+authlib
+python-dotenv
+asyncpg
+sqlalchemy
+databases
