@@ -17,4 +17,5 @@ async def transcribe(file: UploadFile = File(...)):
     # Transcribe the saved file
     text = transcribe_audio(file_path) 
 
+
     return {"transcription": text}
