@@ -22,8 +22,12 @@ def summarise_text(text: str) -> str:
         response = client.chat.completions.create(
             model="deepseek-chat",
             messages=[
-                {"role": "system", "content": "You are an AI that provides concise summaries."},
-                {"role": "user", "content": f"Summarize this: {text}"},
+                {"role": "system", "content": (
+                    "You are an AI assistant that specializes in summarising meetings. "
+                    "Your summaries should focus on key points, decisions made, action items, and any follow-ups required. "
+                    "Format the summary in a structured way with bullet points if necessary."
+                )},
+                {"role": "user", "content": f"Summarize this meeting transcript: {text}"},
             ],
             stream=False
         )
